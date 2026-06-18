@@ -1,182 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- MONETAG VERIFICATION CODE -->
-    <meta name="monetag" content="8720a9f6057e00ec3dfe3bfc7bdfdcb7">
-    
-    <title>The Wheel of Destiny</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="monetag" content="8720a9f6057e00ec3dfe3bfc7bdfdcb7">
 
-        body {
-            background-color: #0d0d0d;
-            color: #e50914;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            overflow-x: hidden;
-            perspective: 1000px;
-            padding: 20px;
-        }
-
-        /* Advertisement Box Styling */
-        .ad-container {
-            margin: 10px auto 30px auto;
-            width: 100%;
-            max-width: 728px;
-            text-align: center;
-            z-index: 10;
-            position: relative;
-        }
-
-        .ad-label {
-            color: #444;
-            font-size: 0.8rem;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .ad-slot {
-            width: 100%;
-            min-height: 90px;
-            background: #141414;
-            border: 1px dashed #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 0.9rem;
-            border-radius: 4px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            text-shadow: 0 0 10px #e50914, 0 0 20px #000;
-            margin-bottom: 40px;
-            text-align: center;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        /* 3D Stage Container */
-        .stage {
-            width: 300px;
-            height: 200px;
-            position: relative;
-            perspective: 1100px;
-            margin-bottom: 40px;
-        }
-
-        /* The 3D Reel */
-        .reel {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            transform-style: preserve-3d;
-            transition: transform 6s cubic-bezier(0.1, 0.8, 0.1, 1);
-        }
-
-        /* Individual Slots on the Reel */
-        .slot {
-            position: absolute;
-            width: 280px;
-            height: 180px;
-            left: 10px;
-            top: 10px;
-            background: rgba(20, 20, 20, 0.95);
-            border: 2px solid #e50914;
-            border-radius: 10px;
-            box-shadow: inset 0 0 20px rgba(229, 9, 20, 0.3), 0 0 15px rgba(0,0,0,0.8);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-            text-align: center;
-            backface-visibility: hidden;
-        }
-
-        .slot h2 {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        .slot p {
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        /* Build the 3D Cylinder geometry (12 panels) */
-        .slot:nth-child(1)  { transform: rotateX(0deg) translateZ(340px); }
-        .slot:nth-child(2)  { transform: rotateX(30deg) translateZ(340px); }
-        .slot:nth-child(3)  { transform: rotateX(60deg) translateZ(340px); }
-        .slot:nth-child(4)  { transform: rotateX(90deg) translateZ(340px); }
-        .slot:nth-child(5)  { transform: rotateX(120deg) translateZ(340px); }
-        .slot:nth-child(6)  { transform: rotateX(150deg) translateZ(340px); }
-        .slot:nth-child(7)  { transform: rotateX(180deg) translateZ(340px); }
-        .slot:nth-child(8)  { transform: rotateX(210deg) translateZ(340px); }
-        .slot:nth-child(9)  { transform: rotateX(240deg) translateZ(340px); }
-        .slot:nth-child(10) { transform: rotateX(270deg) translateZ(340px); }
-        .slot:nth-child(11) { transform: rotateX(300deg) translateZ(340px); }
-        .slot:nth-child(12) { transform: rotateX(330deg) translateZ(340px); }
-
-        /* Button Styling */
-        .spin-btn {
-            background: #e50914;
-            color: #fff;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-family: inherit;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 0 0 15px #e50914;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 10;
-        }
-
-        .spin-btn:hover {
-            background: #b20710;
-            box-shadow: 0 0 25px #ff1a25;
-            transform: scale(1.05);
-        }
-
-        .spin-btn:disabled {
-            background: #555;
-            box-shadow: none;
-            color: #888;
-            cursor: not-allowed;
-        }
-
-        /* Vignette Shadow Effect */
-        .vignette {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.9) 100%);
-            pointer-events: none;
-            z-index: 2;
-        }
-    </style>
-</head>
-<body>
-
+<div class="destiny-wheel-wrapper">
     <div class="vignette"></div>
 
-    <!-- ADVERTISEMENT BOX -->
     <div class="ad-container">
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
@@ -184,17 +10,189 @@
         </div>
     </div>
 
-    <h1>Discover Your Destiny</h1>
+    <h1 class="game-title">Discover Your Destiny</h1>
 
     <div class="stage">
         <div class="reel" id="reel">
-            <!-- Panels generated dynamically by JS -->
-        </div>
+            </div>
     </div>
 
     <button class="spin-btn" id="spinBtn" onclick="spinWheel()">Spin the Wheel</button>
+</div>
 
-    <script>
+<style>
+    .destiny-wheel-wrapper {
+        box-sizing: border-box;
+        background-color: #0d0d0d;
+        color: #e50914;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 80vh;
+        overflow: hidden;
+        perspective: 1000px;
+        padding: 40px 20px;
+        position: relative;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    .destiny-wheel-wrapper * {
+        box-sizing: border-box;
+    }
+
+    /* Advertisement Box Styling */
+    .destiny-wheel-wrapper .ad-container {
+        margin: 10px auto 30px auto;
+        width: 100%;
+        max-width: 728px;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+    }
+
+    .destiny-wheel-wrapper .ad-label {
+        color: #444;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .destiny-wheel-wrapper .ad-slot {
+        width: 100%;
+        min-height: 90px;
+        background: #141414;
+        border: 1px dashed #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        font-size: 0.9rem;
+        border-radius: 4px;
+    }
+
+    .destiny-wheel-wrapper .game-title {
+        font-size: 2.5rem;
+        color: #e50914 !important;
+        text-shadow: 0 0 10px #e50914, 0 0 20px #000;
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    /* 3D Stage Container */
+    .destiny-wheel-wrapper .stage {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        perspective: 1100px;
+        margin-bottom: 40px;
+    }
+
+    /* The 3D Reel */
+    .destiny-wheel-wrapper .reel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 6s cubic-bezier(0.1, 0.8, 0.1, 1);
+    }
+
+    /* Individual Slots on the Reel */
+    .destiny-wheel-wrapper .slot {
+        position: absolute;
+        width: 280px;
+        height: 180px;
+        left: 10px;
+        top: 10px;
+        background: rgba(20, 20, 20, 0.95);
+        border: 2px solid #e50914;
+        border-radius: 10px;
+        box-shadow: inset 0 0 20px rgba(229, 9, 20, 0.3), 0 0 15px rgba(0,0,0,0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+    .destiny-wheel-wrapper .slot h2 {
+        font-size: 1.2rem;
+        color: #fff !important;
+        margin: 0 0 10px 0;
+    }
+
+    .destiny-wheel-wrapper .slot p {
+        font-size: 0.9rem;
+        color: #888 !important;
+        margin: 0;
+    }
+
+    /* Build the 3D Cylinder geometry (12 panels) */
+    .destiny-wheel-wrapper .slot:nth-child(1)  { transform: rotateX(0deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(2)  { transform: rotateX(30deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(3)  { transform: rotateX(60deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(4)  { transform: rotateX(90deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(5)  { transform: rotateX(120deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(6)  { transform: rotateX(150deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(7)  { transform: rotateX(180deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(8)  { transform: rotateX(210deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(9)  { transform: rotateX(240deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(10) { transform: rotateX(270deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(11) { transform: rotateX(300deg) translateZ(340px); }
+    .destiny-wheel-wrapper .slot:nth-child(12) { transform: rotateX(330deg) translateZ(340px); }
+
+    /* Button Styling */
+    .destiny-wheel-wrapper .spin-btn {
+        background: #e50914;
+        color: #fff !important;
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        font-family: inherit;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 0 15px #e50914;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 10;
+    }
+
+    .destiny-wheel-wrapper .spin-btn:hover {
+        background: #b20710;
+        box-shadow: 0 0 25px #ff1a25;
+        transform: scale(1.05);
+    }
+
+    .destiny-wheel-wrapper .spin-btn:disabled {
+        background: #555;
+        box-shadow: none;
+        color: #888 !important;
+        cursor: not-allowed;
+    }
+
+    /* Vignette Shadow Effect scoped to container */
+    .destiny-wheel-wrapper .vignette {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.9) 100%);
+        pointer-events: none;
+        z-index: 2;
+        border-radius: 8px;
+    }
+</style>
+
+<script>
+    (function() {
         const reel = document.getElementById('reel');
         const spinBtn = document.getElementById('spinBtn');
 
@@ -236,7 +234,7 @@
 
         let currentRotation = 0;
 
-        function spinWheel() {
+        window.spinWheel = function() {
             spinBtn.disabled = true;
 
             const totalPanels = 12;
@@ -251,7 +249,6 @@
                 spinBtn.disabled = false;
                 currentRotation %= 360;
             }, 6000);
-        }
-    </script>
-</body>
-</html>
+        };
+    })();
+</script>
