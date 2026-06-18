@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MONETAG VERIFICATION CODE -->
+    <meta name="monetag" content="8720a9f6057e00ec3dfe3bfc7bdfdcb7">
+    
     <title>The Wheel of Destiny</title>
     <style>
         * {
@@ -173,12 +176,11 @@
 
     <div class="vignette"></div>
 
-    <!-- ADVERTISEMENT BOX (Google AdSense කේතය දාන්න තැන) -->
+    <!-- ADVERTISEMENT BOX -->
     <div class="ad-container">
         <div class="ad-label">Advertisement</div>
         <div class="ad-slot">
-            <!-- පස්සේ ඔයාගේ AdSense Code එක මේ හරියෙන් පේස්ට් කරන්න -->
-            [Google AdSense / Ezoic Banner Placeholder]
+            [Ads will appear here]
         </div>
     </div>
 
@@ -196,7 +198,6 @@
         const reel = document.getElementById('reel');
         const spinBtn = document.getElementById('spinBtn');
 
-        // Spooky and funny causes of death
         const causes = [
             "Slipped on a futuristic AI-powered hoverboard.",
             "Tried to pet a fluffy alien creature that wasn't friendly.",
@@ -218,7 +219,6 @@
         
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        // Generate the 12 panels inside the 3D Reel
         for (let i = 0; i < 12; i++) {
             const slot = document.createElement('div');
             slot.className = 'slot';
@@ -245,11 +245,8 @@
             const fullSpins = (5 + Math.floor(Math.random() * 4)) * 360; 
             
             currentRotation -= (fullSpins + (targetPanel * degreesPerPanel));
-
-            // Execute 3D Rotation Animation
             reel.style.transform = `rotateX(${currentRotation}deg)`;
 
-            // Enable button after 6 seconds (Animation duration)
             setTimeout(() => {
                 spinBtn.disabled = false;
                 currentRotation %= 360;
